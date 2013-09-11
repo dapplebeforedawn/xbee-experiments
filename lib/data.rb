@@ -13,7 +13,7 @@ class Raw
   end
 
   def to_s
-    unpack.scan(/../).join('|').upcase
+    unpack.scan(/../).join(' ').upcase
   end
 
   def self.handle?

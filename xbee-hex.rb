@@ -10,7 +10,7 @@ i               = 0
 
 def counter i
   return '' if Options.get.hide_count
-  "#{i.to_s.rjust(4, '0')} "
+  "#{i.to_s.rjust(4, '0')}> "
 end
 
 def output msg
