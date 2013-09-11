@@ -17,8 +17,9 @@ ATAH 2                    <cr>  # "Infrastructure" network is your normal at-hom
 ATIP 1                    <cr>  # Use TCP instead of UDP
 ATMA 0                    <cr>  # Use DHCP
 ATEE 2                    <cr>  # Use WPA2 security
-ATPK <your-wifi-password> <cr>  # Use WPA2 security
+ATPK <your-wifi-password> <cr>  # Your network password
 ATWR                      <cr>  # Save the settings
+ATAC                      <cr>  # Make it so
 ````
 If check your routers connected hosts, you should see the xbee
 
@@ -33,6 +34,7 @@ ATC0 8 <cr>  # Set the port to 8 (note that's a zero not a letter)
 ATAP 0 <cr>  # Go to transparent mode
 ATDO 0 <cr>  # Set the buffers to flush instantly
 ATWR   <cr>  # Save the settings
+ATAC   <cr>  # Make it so
 ````
 
 ### On the Mac 
@@ -47,6 +49,7 @@ Turn on A/D data sampling
 ATIR  222 <cr>  # Sample about every 1/2 second (values are in hex)
 ATD0  2   <cr>  # Set the AD0/DIO0 pin as an analog-in
 ATWR      <cr>
+ATAC      <cr>  # Make it so
 ````
 
 Setup where to send the sampled data
@@ -54,6 +57,7 @@ Setup where to send the sampled data
 +++
 ATDL  <your-pc-ip>  <cr>  # Destination IP, port will always be 3054
 ATWR                <cr>
+ATAC                <cr>  # Make it so
 ````
 
 ## ANALYZING THE DATA
