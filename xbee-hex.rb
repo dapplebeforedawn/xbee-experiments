@@ -16,11 +16,13 @@ end
 def output msg
   if Eng.handle?
      Eng.new(msg)
-   elsif Raw.handle?
+  elsif Percent.handle?
+    Percent.new(msg)
+  elsif Raw.handle?
      Raw.new(msg)
-   else
+  else
      raise "That shouldn't happen"
-   end
+  end
 end
 
 Socket.udp_server_loop(XBEE_PORT) do |msg, msg_src|

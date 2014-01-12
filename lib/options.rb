@@ -1,7 +1,7 @@
 module Options
   def self.get
     return @o if @o
-    @o = Struct.new(:ref_voltage, :ref_pounds, :ref_tare, :hide_count).new
+    @o = Struct.new(:ref_voltage, :ref_pounds, :ref_tare, :hide_count, :use_percent).new
     OptionParser.new do |opts|
       opts.on("-h", "--help", "This help")       { exec "more #{__FILE__}" }
 
@@ -9,6 +9,7 @@ module Options
       opts.on("-w", "--ref_pounds [POUNDS]", "") { |arg| @o.ref_pounds  = arg.to_f }
       opts.on("-z", "--zero [VOLTS]",        "") { |arg| @o.ref_tare    = arg.to_f }
       opts.on("-c", "--hide_count",          "") { |arg| @o.hide_count  = true     }
+      opts.on("-p", "--use_percent",         "") { |arg| @o.use_percent = true     }
     end.parse!
     @o
   end
